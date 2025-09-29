@@ -1,0 +1,24 @@
+apply from: "$rootDir/gradle/scripts/kotlin.gradle"
+apply from: "$rootDir/gradle/scripts/springboot.gradle"
+apply from: "$rootDir/gradle/scripts/jackson.gradle"
+
+dependencies {
+    // library
+    implementation "com.auth0:java-jwt:4.4.0"
+
+    // jackson
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$jackson_core_library_version"
+    implementation "com.fasterxml.jackson.core:jackson-core:$jackson_core_library_version"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jackson_core_library_version"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jackson_core_library_version"
+
+    // spring
+    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
+
+    // internal project
+    implementation project(":air-api")
+    implementation project(":rpc-common")
+
+    testImplementation "io.mockk:mockk:$mockk_library_version"
+    testImplementation "org.testng:testng:$testng_version"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="birru-cat-backend" options="-parameters" />
+      <module name="birru-cat-backend.air-impl" options="-parameters" />
+      <module name="birru-cat-backend.air-impl.main" options="-parameters" />
+      <module name="birru-cat-backend.air-impl.test" options="-parameters" />
+      <module name="birru-cat-backend.air-springboot" options="-parameters" />
+      <module name="birru-cat-backend.air-springboot.main" options="-parameters" />
+      <module name="birru-cat-backend.air-springboot.test" options="-parameters" />
+      <module name="birru-cat-backend.ankle-springboot" options="-parameters" />
+      <module name="birru-cat-backend.ankle-springboot.main" options="-parameters" />
+      <module name="birru-cat-backend.ankle-springboot.test" options="-parameters" />
+      <module name="birru-cat-backend.main" options="-parameters" />
+      <module name="birru-cat-backend.rpc-common" options="-parameters" />
+      <module name="birru-cat-backend.rpc-common.main" options="-parameters" />
+      <module name="birru-cat-backend.rpc-common.test" options="-parameters" />
+      <module name="birru-cat-backend.test" options="-parameters" />
+      <module name="rpc-poc" options="-parameters" />
+      <module name="rpc-poc.air-impl" options="-parameters" />
+      <module name="rpc-poc.air-impl.main" options="-parameters" />
+      <module name="rpc-poc.air-impl.test" options="-parameters" />
+      <module name="rpc-poc.air-springboot" options="-parameters" />
+      <module name="rpc-poc.air-springboot.main" options="-parameters" />
+      <module name="rpc-poc.air-springboot.test" options="-parameters" />
+      <module name="rpc-poc.ankle-springboot" options="-parameters" />
+      <module name="rpc-poc.ankle-springboot.main" options="-parameters" />
+      <module name="rpc-poc.ankle-springboot.test" options="-parameters" />
+      <module name="rpc-poc.main" options="-parameters" />
+      <module name="rpc-poc.rpc-common" options="-parameters" />
+      <module name="rpc-poc.rpc-common.main" options="-parameters" />
+      <module name="rpc-poc.rpc-common.test" options="-parameters" />
+      <module name="rpc-poc.test" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: "cat-air"
+  profiles:
+    active: dev
+server:
+  port: 8080

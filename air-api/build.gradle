@@ -1,0 +1,6 @@
+apply from: "$rootDir/gradle/scripts/kotlin.gradle"
+
+dependencies {
+    // spring
+    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
+}
