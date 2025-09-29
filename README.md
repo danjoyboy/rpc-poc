@@ -1,6 +1,26 @@
-# BIRRU CAT BACKEND APPLICATION
+# RPC POC
 
-## How to run
+## Architecture
+```
+Air Service -> Ankle Service
+```
+
+## Call Procedure from air service
 ```bash
-./gradlew :cat-springboot:bootRun --args="--spring.profiles.active=stg" -PjvmArgs="-Xms2g -Xmx2g -XX:+UseParallelGC"
+curl --location 'localhost:8080/rpc/calculator' \
+--header 'Content-Type: application/json' \
+--data '{
+    "methodName": "plus",
+    "parameters": [1, 123123]
+}'
+```
+
+## Call Procedure from ankle service
+```bash
+curl --location 'localhost:9000/rpc/math' \
+--header 'Content-Type: application/json' \
+--data '{
+    "methodName": "doPlus",
+    "parameters": []
+}'
 ```
