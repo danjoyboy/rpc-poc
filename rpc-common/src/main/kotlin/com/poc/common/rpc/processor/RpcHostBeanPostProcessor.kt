@@ -16,10 +16,6 @@ class RpcHostBeanPostProcessor(
     private val requestMappingHandlerMapping: RequestMappingHandlerMapping
 ) : BeanPostProcessor {
 
-    companion object {
-        private val rpcControllerMap = HashMap<String, RpcMethodProxyController>()
-    }
-
     private val logger = LoggerFactory.getLogger(this::class.java)
 
     @Throws(BeansException::class)
@@ -39,7 +35,7 @@ class RpcHostBeanPostProcessor(
         return bean
     }
 
-    // Dynamically register each method as an HTTP endpoint
+    // Dynamically register each class as an HTTP endpoint
     private fun registerClassAsEndpoint(rpcId: String, bean: Any) {
         val path = "/rpc/$rpcId"
         val controller = RpcMethodProxyController(bean)
@@ -52,7 +48,6 @@ class RpcHostBeanPostProcessor(
             .methods(RequestMethod.POST)
             .build()
         requestMappingHandlerMapping.registerMapping(mappingInfo, controller, handlerMethod.method)
-        rpcControllerMap[path] = controller
 
         logger.info("[RpcServletBeanPostProcessor] `$rpcId` RPC is registered")
     }
