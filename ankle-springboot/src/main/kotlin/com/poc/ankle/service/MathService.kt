@@ -5,7 +5,6 @@ import com.poc.common.rpc.annotation.RpcServlet
 import org.springframework.stereotype.Service
 
 @Service
-@RpcServlet("math")
 class MathService(
     private val calculatorService: CalculatorService
 ) {
