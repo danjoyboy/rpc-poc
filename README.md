@@ -48,12 +48,7 @@ curl --location 'localhost:8080/rpc/calculator' \
 }'
 ```
 
-## Call Procedure from ankle service
+## Test RPC from ankle controller
 ```bash
-curl --location 'localhost:9000/rpc/math' \
---header 'Content-Type: application/json' \
---data '{
-    "methodName": "doPlus",
-    "parameters": []
-}'
+curl --location 'localhost:9000/execute'
 ```
